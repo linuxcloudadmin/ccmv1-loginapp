@@ -2,7 +2,7 @@ services:
   customerlogin-app:
     build:
       context: .
-    platform: linux/arm64
+    #platform: linux/arm64
     ports:
       - "8081:8081"
     environment:
