@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Console Appender Only -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Log Levels -->
+    <logger name="org.springframework" level="INFO" />
+    <logger name="com.ascendpgp.customerlogin" level="DEBUG" />
+    <logger name="org.mongodb.driver" level="INFO" />
+
+    <!-- Root Logger - Console only for container -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
