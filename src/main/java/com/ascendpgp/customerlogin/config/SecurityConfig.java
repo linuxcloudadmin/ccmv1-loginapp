@@ -42,10 +42,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 new AntPathRequestMatcher("/api/customer/login"),
+                                new AntPathRequestMatcher("/api/customer/logout"),
                                 new AntPathRequestMatcher("/api/customer/login/subsequent"),
                                 new AntPathRequestMatcher("/api/customer/forgot-password/**"),
                                 new AntPathRequestMatcher("/api/customer/verify"),
                                 new AntPathRequestMatcher("/api/customer/jwt/validate"),
+                                new AntPathRequestMatcher("/api/customer/token/validate"),    
+                                new AntPathRequestMatcher("/api/customer/send-verification"),                                                  
                                 new AntPathRequestMatcher("/actuator/**"),
                                 new AntPathRequestMatcher("/swagger-ui/**"),
                                 new AntPathRequestMatcher("/v3/api-docs/**")
